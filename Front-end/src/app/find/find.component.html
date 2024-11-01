@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+
+
+<body>
+
+<pre>
+
+</pre>
+
+
+<div class="container mt-4">
+
+
+    <h2 class="text-center"> Find article  </h2> 
+    <pre></pre>
+    
+    <div class="col-6 mx-auto">
+        <h5>Title</h5>
+        <input  type="text" class="form-control m-1"  id="title" [(ngModel)]="ftitle">
+        <h5>Object</h5>
+        <input  type="text" class="form-control m-1" id="object" [(ngModel)]="fobject" >
+       
+        <p>
+        </p>
+        <label for="options"><h5>Select Type:</h5></label><br>
+        
+        <select id="options" [(ngModel)]="ftype">
+         
+          <option value="electronic">Electronics&Multimedia</option>
+          <option value="clothing">Clothing</option>
+          <option value="accesoires">accesoires</option>
+          <option value="cash">Cash</option>
+          <option value="vehicule">Vehicule</option>
+        
+         
+          
+          
+        </select>
+        <br>
+        <p></p>
+        <label for="options"><h5>Select region:</h5></label><br>
+        
+<select id="options" [(ngModel)]="fplace ">
+ 
+  <option value="op1">Ariana</option>
+  <option value="op2">Béja</option>
+  <option value="op3">Ben Arous</option>
+  <option value="op4">Bizerte</option>
+  <option value="op5">Gabès</option>
+  <option value="op6">Gafsa</option>
+  <option value="op7">Jendouba</option>
+  <option value="op8">Kairouan</option>
+  <option value="op9">Kasserine</option>
+  <option value="op10">Kebili</option>
+  <option value="op11">Kef</option>
+  <option value="op12">Mahdia</option>
+  <option value="op13">Manouba</option>
+  <option value="op14">Medenine</option>
+  <option value="op15">Monastir</option>
+  <option value="op16">Nabeul</option>
+  <option value="op17">Sfax</option>
+  <option value="op18">Sidi Bouzid</option>
+  <option value="op19">Siliana</option>
+  <option value="op20">Sousse</option>
+  <option value="op21">Tataouine</option>
+  <option value="op22">Tozeur</option>
+  <option value="op23">Tunis</option>
+  <option value="op24">Zaghouan</option>
+  
+  
+</select>
+<br>
+<br>
+<h5>Select time of losing:</h5><br>
+<input type="date" id="date1" [(ngModel)]="fdate">
+   
+        
+        <pre>
+
+        </pre>
+        
+
+        
+<p>
+</p>
+        <button  class="btn btn-dark form-control m-1" >Find</button> <!--this button will redirect to a page that shows the suggested items, will create a component and then use a router 
+        -->
+        <PRE>
+
+
+
+
+        </PRE>
+
+
+    </div>
+
+</div>
+</body>
+</html>

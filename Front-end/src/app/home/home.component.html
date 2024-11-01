@@ -1,0 +1,88 @@
+<!-- banner start -->
+<app-header></app-header>
+<section class="section banner overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-11 mx-auto text-center position-relative">
+        <h1 class="text-dark mb-0">Stay ahead of the game – all football stats, results, and fixtures at your fingertips!</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- banner end -->
+
+<!-- blog wrapper start -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">
+          <span>Latest Updates</span>
+        </h2>
+      </div>
+    </div>
+
+    <div *ngIf="!allposts">
+      <div class="row gy-5 gx-4 g-xl-5">
+        <div class="col-lg-6" *ngFor="let post of p"> <!-- Use 'p' for latest posts -->
+          <article class="card post-card h-100 border-0 bg-transparent">
+            <div class="card-body">
+              <div class="post-image position-relative">
+                <img class="w-100 h-auto rounded" [src]="post.urlToImage" alt="{{ post.title }}" width="970" height="500">
+              </div>
+              <ul class="card-meta list-inline mb-3">
+                <li class="list-inline-item mt-2">
+                  <i class="ti ti-calendar-event"></i>
+                  <span>{{ post.publishedAt }}</span>
+                </li>
+              </ul>
+              <h3 class="mb-3 post-title">{{ post.title }}</h3>
+              <div class="mb-3">
+                <span><strong>Description:</strong> {{ post.description }}</span><br>
+                <span><strong>Author:</strong> {{ post.author }}</span><br>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="allposts">
+      <div class="row gy-5 gx-4 g-xl-5">
+        <div class="col-lg-6" *ngFor="let post of all"> <!-- Use 'all' for all posts -->
+          <article class="card post-card h-100 border-0 bg-transparent">
+            <div class="card-body">
+              <div class="post-image position-relative">
+                <img class="w-100 h-auto rounded" [src]="post.urlToImage" alt="{{ post.title }}" width="970" height="500">
+              </div>
+              <ul class="card-meta list-inline mb-3">
+                <li class="list-inline-item mt-2">
+                  <i class="ti ti-calendar-event"></i>
+                  <span>{{ post.publishedAt }}</span>
+                </li>
+              </ul>
+              <h3 class="mb-3 post-title">{{ post.title }}</h3>
+              <div class="mb-3">
+                <span><strong>Description:</strong> {{ post.description }}</span><br>
+                <span><strong>Content:</strong> {{ post.content }}</span><br>
+                <span><strong>Author:</strong> {{ post.author }}</span><br>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 text-center">
+      <a class="btn btn-primary mt-5" aria-label="View latest posts" (click)="allp()" *ngIf="allposts">
+        <i class="ti ti-new-section me-2"></i>View latest posts
+      </a>
+      <a class="btn btn-primary mt-5" aria-label="View all posts" (click)="allp()" *ngIf="!allposts">
+        <i class="ti ti-new-section me-2"></i>View all posts
+      </a>
+      <p></p>
+    </div>
+  </div>
+</section>
+<!-- blog wrapper end -->
+<app-footer></app-footer>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+
+
+<body>
+
+<pre>
+
+</pre>
+
+
+<div class="container mt-4">
+
+
+    <h2 class="text-center"> Create Post  </h2> 
+    <pre></pre>
+    
+    <div class="col-6 mx-auto">
+        <h5>Title</h5>
+        <input  type="text" class="form-control m-1" [(ngModel)]="title">
+        <h5>tel number</h5>
+        <input  type="tel" class="form-control m-1" [(ngModel)]="tel">
+        <h5>Short Description</h5>
+        <input  type="text" class="form-control m-1"  id="des" [(ngModel)]="des">
+        
+        <p>
+        </p>
+        <label for="options"><h5>Select Type:</h5></label><br>
+        
+        <select id="options" [(ngModel)]="type">
+         
+          <option value="electronic">Electronics&Multimedia</option>
+          <option value="clothing">Clothing</option>
+          <option value="accesoires">accesoires</option>
+          <option value="cash">Cash</option>
+          <option value="vehicule">Vehicule</option>
+        
+         
+          
+          
+        </select>
+        <br>
+        <p></p>
+        <label for="options"><h5>Select region:</h5></label><br>
+        
+<select id="options" [(ngModel)]="place" >
+ 
+  <option value="ariana">Ariana</option>
+  <option value="beja">Béja</option>
+  <option value="benarous">Ben Arous</option>
+  <option value="bizerte">Bizerte</option>
+  <option value="gabes">Gabès</option>
+  <option value="gafsa">Gafsa</option>
+  <option value="jendouba">Jendouba</option>
+  <option value="Kairouan">Kairouan</option>
+  <option value="Kasserine">Kasserine</option>
+  <option value="Kebili">Kebili</option>
+  <option value="Kef">Kef</option>
+  <option value="Mahdia">Mahdia</option>
+  <option value="manouba">Manouba</option>
+  <option value="Medenine">Medenine</option>
+  <option value="Monastir">Monastir</option>
+  <option value="Nabeul">Nabeul</option>
+  <option value="sfax">Sfax</option>
+  <option value="sidibouzid">Sidi Bouzid</option>
+  <option value="Siliana">Siliana</option>
+  <option value="Sousse">Sousse</option>
+  <option value="Tataouine">Tataouine</option>
+  <option value="Tozeur">Tozeur</option>
+  <option value="Tunis" >Tunis</option>
+  <option value="Zaghouan">Zaghouan</option>
+  
+  
+</select>
+<br>
+<br>
+<h5>Select time of finding:</h5><br>
+<input type="date" id="date1" [(ngModel)]="dateoflosing">
+   
+        
+        <pre>
+
+        </pre>
+        <h5>Upload picture of item:</h5><br>
+        <input type="file"  class="form-control m-1" placeholder="image" id="img1" (change)="onFileSelected($event)" accept="image/*">
+        <p></p>
+
+        <h5>Detailed Description</h5><br>
+        <textarea id="" cols="30" rows="4" placeholder="give a more in depth description" class="form-control m-1" id="des2" [(ngModel)]="detail" ></textarea>
+
+        
+<p>
+</p>
+        <button  class="btn btn-dark form-control m-1"(click)="sent()">Create</button>
+        <PRE>
+
+
+
+
+        </PRE>
+
+
+    </div>
+ 
+</div>
+
+</body>
+</html>

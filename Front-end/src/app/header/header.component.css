@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav {
+    background-color: #f8f9fa; /* Light background for the header */
+    padding: 10px 0; /* Reduced padding for header height */
+}
+
+.club-logos {
+    width: 100%; /* Ensures full width */
+    overflow-x: auto; /* Enables horizontal scrolling if logos overflow */
+    white-space: nowrap; /* Prevents logos from wrapping */
+    padding: 5px 0; /* Padding around the logos */
+}
+
+.club-logos img {
+    max-height: 60px; /* Height of logos */
+    margin: 0 5px; /* Space between logos */
+}
+
+.navbar {
+    padding: 10px 0; /* Padding for the navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 20px; /* Increased padding for nav links */
+    font-size: 18px; /* Increased font size for better readability */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Set text color to white */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Change color on hover for visibility */
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Slightly smaller font size on mobile */
+    }
+}

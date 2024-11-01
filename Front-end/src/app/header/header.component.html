@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuniScore</title>
+</head>
+<body>
+    <div class="header-height-fix"></div>
+    <header class="header-nav">
+        <!-- Club Logos Section -->
+        <div class="club-logos text-center my-3">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/CA.png" alt="Club 1 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/ASG.png" alt="Club 2 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/CAB.png" alt="Club 3 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/CSS.png" alt="Club 4 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/ESS.png" alt="Club 5 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/EST.png" alt="Club 6 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/st.jpg" alt="Club 7 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/USM.png" alt="Club 8 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/UST.png" alt="Club 9 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/ESZ.png" alt="Club 10 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/ESM.png" alt="Club 11 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/AS.png" alt="Club 12 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/EGSG.png" alt="Club 13 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/JSO.png" alt="Club 14 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/OB.gif" alt="Club 15 Logo" class="img-fluid">
+                    </div>
+                    <div class="p-2">
+                        <img src="../../assets/assets/images/Clubs/usgb.png" alt="Club 16 Logo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <!-- Logo -->
+                        <a class="navbar-brand font-weight-bold mb-0 d-flex align-items-center" routerLink="/Home" title="TuniScore">
+                            <img src="../../assets/assets/images/Ligue_nationale_de_football_professionnel.png" alt="TuniScore Logo" style="height: 50px; margin-right: 10px; ">
+                            <h1 class="mb-0">TuniScore</h1>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ti ti-menu-2 d-inline"></i>
+                            <i class="ti ti-x d-none"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navHeader">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" routerLink="/Home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/fixtures">Fixtures</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/results">Results</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/transfers">Transfers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/players">Players</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="/stats">Stats</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" *ngIf="!(isLoggedIn())" routerLink="/signin">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" *ngIf="isLoggedIn()" (click)="logout()">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>  
+    </header>
+</body>
+</html>
